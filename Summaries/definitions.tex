@@ -1,0 +1,70 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[dvipsnames,usenames]{xcolor}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\newgeometry{top=2cm, bottom=2cm, left=1.5cm, right=1.5cm}
+\usepackage[shortlabels]{enumitem}
+\usepackage{cleveref}
+\usepackage{mdframed}
+\usepackage{times}
+\usepackage{dutchcal}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[subsection]
+\newtheorem{statement}{Statement}[subsection]
+\renewcommand\thedefinition{\arabic{subsection}.\arabic{definition}}
+\renewcommand\thestatement{\arabic{subsection}.\arabic{statement}}
+\lhead{Algebra II Definitions}
+\rhead{Shun (@shun4midx)}
+\pagestyle{fancy}
+
+\begin{document}
+\begin{center}
+  {\Large \bf Algebra II Definitions}\\[6pt]
+  \text{By Shun (@shun4midx)}
+\end{center}
+
+\section*{Definitions}
+\refstepcounter{subsection}
+\setcounter{definition}{0}
+\setcounter{statement}{0}
+\subsection*{\underline{\textbf{2-19-25 (Week 1): Rings and Modules (Quotient)}}}
+\textbf{Today's notes assume $R$ to be commutative}
+\begin{statement}
+  Given $R \in\text{}_R\mathcal{M}$, and $I \subseteq R$, we say $I$ is a left \textbf{ideal} of $R$ $\Rightarrow \boxed{R/I}$ is a \underline{left $R$-module}
+\end{statement}
+\vspace{0.125em}
+
+\begin{definition}
+Let $I \subsetneq R$ be an \textbf{ideal}
+  \begin{itemize}
+    \item $I$ is \textbf{maximum} if $\forall\ \text{}_R\mathcal{M} \ni J \subsetneq R,\ I \subsetneq J \Rightarrow J = R$ \textit{(It's not the ``biggest'', it just is not comparable to anything bigger)}
+    \item $I$ is \textbf{prime} is $\forall\ x, y \in R,$ we have ``$xy \in I \Rightarrow x \in I \text{ or } y \in I$'', i.e. ``$x \notin I,\ y \notin I \Rightarrow xy \notin I$''
+  \end{itemize}
+\end{definition}
+\vspace{0.125em}
+
+\begin{definition}
+  Here are some special terms:
+  \begin{itemize}
+    \item $a \in R$ is \textbf{nilpotent} if $\exists\ n \in \mathbb{N}$, s.t. $a^n = 0$ (i.e. a special type of \underline{zero divisor})
+    \item $\mathcal{N}_R$ is called the \textbf{nilradical} of $R$ (because it is $\sqrt{\{0\}}$)
+    \item Max$R$ = {\textbf{max ideals} of $R$}
+    \item Spec$R$ = {\textbf{prime ideals} of $R$}
+    \item $\sqrt{I} := \{a \in R \ | \ \underline{a^n \in I} \text{ for some } n \in \mathbb{N}\}$, it is called the \textbf{radical} of $I$
+  \end{itemize}
+\end{definition}
+\vspace{0.125em}
+
+\begin{definition}
+  An \textbf{ideal} $Q$ of $R$ is \textbf{primary} if $Q \neq R$ and ``$\boxed{xy \in Q, x \notin Q \Rightarrow y^n \in Q}\text{ for some } n \in \mathbb{N}$''
+\end{definition}
+\vspace{0.125em}
+
+\begin{definition}
+  $Q$ is $\mathbf{P}$\textbf{-primary} if $Q$ is \textbf{primary} and $\underline{\sqrt{Q} = P}$
+\end{definition}
+\vspace{0.125em}
+\end{document}
