@@ -1,0 +1,211 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=red]{hyperref}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[dvipsnames,usenames]{xcolor}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\newgeometry{top=2cm, bottom=2cm, left=1.5cm, right=1.5cm}
+\usepackage[shortlabels]{enumitem}
+\usepackage{cleveref}
+\usepackage{mdframed}
+\usepackage{times}
+\usepackage{dutchcal}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+\newtheorem{fact}{Fact}
+\newtheorem{claim}{Claim}
+\newtheorem{example}{Example}
+\renewcommand\thetheorem{\arabic{subsection}.\arabic{theorem}}
+\renewcommand\thelemma{\arabic{subsection}.\arabic{lemma}}
+\renewcommand\theproposition{\arabic{subsection}.\arabic{proposition}}
+\renewcommand\thecorollary{\arabic{subsection}.\arabic{corollary}}
+\renewcommand\theremark{\arabic{subsection}.\arabic{remark}}
+\renewcommand\thefact{\arabic{subsection}.\arabic{fact}}
+\renewcommand\theclaim{\arabic{subsection}.\arabic{claim}}
+\renewcommand\theexample{\arabic{subsection}.\arabic{example}}
+\lhead{Algebra II Theorems}
+\rhead{Shun (@shun4midx)}
+\pagestyle{fancy}
+
+\begin{document}
+\begin{center}
+  {\Large \bf Algebra II Theorems}\\[6pt]
+  \text{By Shun (@shun4midx)}
+\end{center}
+
+\section*{Statements}
+\begin{mdframed}
+\textbf{Notice:} I have briefly mentioned this in my README.md document, but by ``Theorems'', I refer to not just Theorems, but also Lemmas, Propositions, Corollaries and other things of the sort.
+\end{mdframed}
+
+\refstepcounter{subsection}
+\setcounter{subsection}{1}
+\setcounter{theorem}{0}
+\setcounter{lemma}{0}
+\setcounter{proposition}{0}
+\setcounter{corollary}{0}
+\setcounter{fact}{0}
+\setcounter{claim}{0}
+\setcounter{example}{0}
+\subsection*{\underline{\textbf{2-19-25 (Week 1): Rings and Modules (Quotient)}}}
+\begin{fact}
+  For the relationship between $I$ and $R/I$,
+  \begin{enumerate} [(1)]
+    \item $I$ is \textbf{max} $\Leftrightarrow \ R/I$ is a \textbf{field}
+    \item $I$ is \textbf{prime} $\Leftrightarrow \ R/I$ is an \textbf{integral domain}
+  \end{enumerate}
+\end{fact}
+\vspace{0.125em}
+
+\begin{fact}
+  $\mathcal{N}_R \in \text{}_R \mathcal{M}$, i.e. it is an \textbf{ideal}, and \underline{$R/\mathcal{N}_R$} is \textbf{reduced}
+\end{fact}
+\vspace{0.125em}
+
+\begin{proposition}
+  $\boxed{\mathcal{N}_R = \cap_{P \in \text{Spec}R} P}$
+\end{proposition}
+\vspace{0.125em}
+
+\begin{corollary}
+  $\sqrt{I} = \bigcap_{\text{Spec}R \ni P \supseteq} P$
+\end{corollary}
+\vspace{0.125em}
+
+\begin{example}
+  Usually $\sqrt{I^n} \neq I$, but if \underline{$P' \in \text{Spec}R$}, then $\boxed{\sqrt{(P')^n} = P'}$
+\end{example}
+\vspace{0.125em}
+
+\begin{fact}
+  The following are true about \textbf{primary ideals}
+  \begin{enumerate} [(1)]
+    \item $Q$ is \textbf{primary} $\Leftrightarrow R/Q \neq 0$ and the \textbf{zero-divisors} in $R/Q$ are \textbf{nilpotent}
+    \item If $Q$ is \textbf{primary}, then $\sqrt{Q}$ is the \textbf{smallest prime ideal} containing $Q$
+  \end{enumerate}
+\end{fact}
+\vspace{0.125em}
+
+\begin{example}
+  $\boxed{\sqrt{I} \in \text{Spec}R \not\Leftarrow I \text{ is \textbf{primary}}}$ \textit{(Key example)}
+\end{example}
+\vspace{0.125em}
+\newpage
+
+\section*{Statements and Proof Outlines}
+\begin{mdframed}
+\textbf{Notice:} I would give enough detail but not write my proofs formally here. They are proof \textbf{outlines} so it is easier to recall \textbf{for me}, not actual proofs nor in complete English. It may look messy to you, that's understandable. I have a certain chronic eye condition and am dyslexic, so I need such ``messiness'' to understand what I write. When I can't color-code stuff like in  my notes, this is the best alternative.
+\end{mdframed}
+
+\refstepcounter{subsection}
+\setcounter{subsection}{1}
+\setcounter{theorem}{0}
+\setcounter{lemma}{0}
+\setcounter{proposition}{0}
+\setcounter{corollary}{0}
+\setcounter{fact}{0}
+\setcounter{claim}{0}
+\setcounter{example}{0}
+\subsection*{\underline{\textbf{2-19-25 (Week 1): Rings and Modules (Quotient)}}}
+\begin{fact}
+  For the relationship between $I$ and $R/I$,
+  \begin{enumerate} [(1)]
+    \item $I$ is \textbf{max} $\Leftrightarrow \ R/I$ is a \textbf{field}
+    \item $I$ is \textbf{prime} $\Leftrightarrow \ R/I$ is an \textbf{integral domain}
+  \end{enumerate}
+\end{fact}
+
+\noindent\textit{Proof.}
+  \begin{enumerate} [(1)]
+    \item ``$\Rightarrow$'': $\forall\ \overline{0} \neq \overline{x} \in R/I,\ x \notin I \Rightarrow \langle x \rangle + I \supsetneq I \Rightarrow \langle x \rangle + I = R$. In particular, $1 \in R \Rightarrow \exists\ a \in I \text{, s.t. } yx + a = 1 \Rightarrow \overline{yx} = \overline{1} \Rightarrow \overline{y} = \overline{x}^{-1}$ \newline
+    ``$\Leftarrow$'': Let $I \subsetneq J$, pick $x$ in $J \setminus I$, $\overline{x} \neq \overline{0}$ in $R/I$. Let $\overline{y} \in R/I$, st. $\overline{y}\overline{x} = \overline{1} \Rightarrow yx + a = 1,\ a \in J$. In particular, $1 \in J \Rightarrow \forall\ r \in R, 1(r) = r \in J \therefore R = J$, and hence is \textbf{max} \qed
+    \item ``$\Rightarrow$'': $\overline{x}\overline{y} = \overline{0} \text{ and } \overline{x} \neq \overline{0} \Rightarrow xy \in I \text{ and } x \notin I \Rightarrow y \in I \Rightarrow \overline{y} = \overline{0}$, by def, OK \newline
+    ``$\Leftarrow$'': $xy \in I \text{ and } x \notin I \Rightarrow \overline{x}\overline{y} = \overline{0} \text{ and } \overline{x} \neq \overline{0} \Rightarrow \overline{y} = \overline{0} \Rightarrow y \in I$, by def, OK \qed
+  \end{enumerate}
+\vspace{0.125em}
+
+\begin{fact}
+  $\mathcal{N}_R \in \text{}_R \mathcal{M}$, i.e. it is an \textbf{ideal}, and \underline{$R/\mathcal{N}_R$} is \textbf{reduced}
+\end{fact}
+
+\begin{proof}
+  $a, b \in \mathcal{N}_R$, say $a^n = 0,\ b^m = 0$ and $r \in R \Rightarrow$ $\underline{(ra)^n} = r^n a^n = 0 \Rightarrow \underline{ra \in \mathcal{N}_R}$ and $\underline{(a + b)^{n + m}} = \sum_{i = 0}^{n + m} {{n + m}\choose{i}}\ a^i\ b^{m + n - i} = 0 \Rightarrow \underline{a + b \in \mathcal{N}_R}$. For \textbf{reduced}, of course, quotient $\mathcal{N}_R$ means no more \underline{non-zero nilpotent}
+\end{proof}
+\vspace{0.125em}
+
+\begin{proposition}
+  $\boxed{\mathcal{N}_R = \cap_{P \in \text{Spec}R} P}$
+\end{proposition}
+
+\noindent\textit{Proof.}
+\begin{itemize}
+  \item ``$\subseteq$'': For $a \in \mathcal{N}_R$, say \underline{$a^n = 0 \in P$} $\forall P \in \text{Spec}R$. By def of $P$, $a \in P\ \forall P \Rightarrow a \in \text{RHS}$
+  \item ``$\supseteq$'': Use contraposition and Zorn's Lemma. Let $a \notin \mathcal{N}_R,\ S = \{\text{}_R\mathcal{M} \ni I \subseteq R\ |\ \underline{a^n \notin I}\ \forall n \in \mathbb{N}\}$. Note \underline{$S \neq \emptyset$} since \underline{$\{0\} \in S$} ($a \notin \mathcal{N}_R \Rightarrow a^k \neq 0\ \forall k \in \mathbb{N}$)\newline\newline
+  \noindent Define \textbf{partial order} ``$\leq$'' in $S$ as ``$I \leq J \Leftrightarrow I \subseteq J$''. Let \underline{$\{I_i\ |\ i \in \Lambda\}$} be a \textbf{chain} in $S$. Then, $\text{}_R\mathcal{M} \ni I := \underline{\cup_{i \in \Lambda} I_i}$ is a \textbf{least upper bound} of $\{I_i\ |\ i \in \Lambda\}$. (Module because $a, b \in I \Rightarrow a \in I_i,\ b \in I_j \Rightarrow I_i \subseteq I_j \text{ or } I_j \subseteq I_i \Rightarrow a + b \subseteq I_i \text{ or } I_j \subseteq I$). By \textbf{Zorn's Lemma}, $\exists$ a \textbf{max element} $Q$ in $S$
+  
+  \begin{claim}
+    $\boxed{Q \in \text{Spec}R}$ (Then $a \notin Q \Rightarrow a \notin \text{RHS}$)
+  \end{claim}
+  \vspace{-2.0em}\begin{proof}
+    $x \notin Q \Rightarrow \langle x \rangle + Q \supsetneq Q \Rightarrow \underline{\langle x \rangle + Q \notin S} \Rightarrow \underline{a^n \in \langle x \rangle + Q}$. Similarly, $y \notin Q \Rightarrow a^m \in \langle y \rangle + Q$. Thus, $x \notin Q,\ y \notin Q \Rightarrow a^{m + n} \in \langle xy \rangle + Q \Rightarrow \langle xy \rangle + Q \supsetneq Q, \text{ i.e. } \underline{xy \notin Q}$ (def of prime ideal)
+  \end{proof}
+\end{itemize}
+
+\begin{corollary}
+  $\sqrt{I} = \bigcap_{\text{Spec}R \ni P \supseteq I} P$
+\end{corollary}
+
+\begin{proof}
+  Let \raisebox{-0.7em}{$\begin{aligned} \phi:\ R &\longrightarrow R/I \\ r &\longmapsto \overline{r} \end{aligned}$}. Then, $\sqrt{I} = \phi^{-1}(\mathcal{N}_{R/I}) = \phi^{-1}(\bigcap_{\overline{P} \in \text{Spec}R/I} \overline{P}) = \bigcap_{\text{Spec}R \ni P \supseteq I} P$, $\overline{P} = P/I$
+\end{proof}
+\vspace{0.125em}
+
+\newpage
+
+\begin{example}
+  Usually $\sqrt{I^n} \neq I$, but if \underline{$P' \in \text{Spec}R$}, then $\boxed{\sqrt{(P')^n} = P'}$
+\end{example}
+
+\begin{proof}
+  ``$\subseteq$'': By Prop 1.1, $\boxed{\sqrt{(P')^n} = \cap_{P \subseteq (P')^n} P} \subseteq P'$ \newline
+  ``$\supseteq$'': $\forall\ x \in P',\ \underline{x^n \in (P')^n} \Rightarrow x \in \sqrt{(P')^n}$
+\end{proof}
+\vspace{0.125em}
+
+\begin{fact}
+  The following are true about \textbf{primary ideals}
+  \begin{enumerate} [(1)]
+    \item $Q$ is \textbf{primary} $\Leftrightarrow R/Q \neq 0$ and the \textbf{zero-divisors} in $R/Q$ are \textbf{nilpotent}
+    \item If $Q$ is \textbf{primary}, then $\sqrt{Q}$ is the \textbf{smallest prime ideal} containing $Q$
+  \end{enumerate}
+\end{fact}
+
+\noindent\textit{Proof.}
+\begin{enumerate} [(1)]
+  \item ``$\Rightarrow$'': $\underline{\overline{x}\overline{y} = \overline{0},\ \overline{x} \neq 0} \Rightarrow xy \in Q,\ x \notin Q \Rightarrow y^n \in Q \Rightarrow \boxed{(\overline{y})^n = \overline{0}}$ \newline
+  ``$\Leftarrow$'': $\underline{xy \in Q,\ x \notin Q} \Rightarrow \overline{x}\overline{y} = \overline{0},\ \overline{x} \neq \overline{0} \text{ in } R/Q \Rightarrow \underline{(\overline{y})^n = \overline{0}} \text{ for some } n \in \mathbb{N} \Rightarrow \boxed{y^n \in Q}$
+  \item ``$\sqrt{Q} \in \text{Spec}R$'': We know $\underline{xy \in \sqrt{Q}} \Rightarrow (xy)^n = \underline{x^n y^n \in Q}$. $\underline{x \notin \sqrt{Q}} \Rightarrow x^m \notin Q \forall m \Rightarrow \underline{x^n \notin Q}$. By def, $\underline{(y^n)^l \in Q} \Rightarrow y \in \sqrt{Q}$\newline\newline
+  ``Smallest'': By Prop 1.1, $\sqrt{Q} = \bigcap_{P \supseteq Q} P \Rightarrow \underline{\sqrt{Q} \subset P}$, so $\forall P \in \text{Spec}R,\ P \supseteq Q$ \qed
+\end{enumerate}
+\vspace{0.125em}
+
+\begin{example}
+  $\boxed{\sqrt{I} \in \text{Spec}R \not\Leftarrow I \text{ is \textbf{primary}}}$
+\end{example}
+
+\begin{proof}
+  For $R = \mathbb{R}[x, y]$, we need $xy \in I$ and $x \notin I \Rightarrow y^n \in I$, so $\boxed{I = \langle x^2, xy \rangle}$ is \textbf{not primary}. Notice, $I = \langle x \rangle \cap \langle x^2, xy, y^2 \rangle = \langle x \rangle \cap \langle x, y \rangle^2$.\newline
+  
+  \noindent Now, $R/\langle x \rangle = \mathbb{R}[x, y]/\langle x \rangle \cong \mathbb{R}[y]$, which is \textbf{not a field} $\therefore$ \underline{$\langle x \rangle$ is \textbf{not a maximal ideal}}.
+  $R/\langle x, y \rangle \cong \mathbb{R}$, which is a field $\Rightarrow \underline{\langle x, y \rangle \text{ is a \textbf{max ideal}}}$\newline
+
+  \noindent Now, we know $\boxed{\sqrt{I}} = \sqrt{\langle x \rangle} \cap \sqrt{\langle x, y \rangle^2} = \langle x \rangle \cap \langle x, y \rangle = \boxed{\langle x \rangle}$ , which is \textbf{primary}
+\end{proof}
+\vspace{0.125em}
+
+\end{document}
