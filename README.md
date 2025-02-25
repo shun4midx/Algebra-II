@@ -1,5 +1,7 @@
 # Shun's Algebra II Notes
 
+## Notice, I may not upload summary notes as fast, since the semester is hitting me like a truck, but I will definitely still upload them. I'll upload normal notes on time though for sure.
+
 Some of Shun's (Abstract) Algebra II notes during Spring 2025
 
 I plan to upload my biweekly notes for Algebra II during Spring 2025, which will focus more on Ring and Field Theory, including Galois Theory and Commutative Algebra.
